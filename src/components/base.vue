@@ -2,11 +2,21 @@
 <!-- contains header navbar and footer -->
 <div class="base col-xs-12">
 
-    <div class="head navbar">
-            <router-link to="/" class="nav-home-logo">Home</router-link>
-            <router-link to="/products" class="nav-option">Products</router-link>
-            <router-link to="/media" class="nav-option">Media</router-link>
-            <router-link to="/blog" class="nav-option">Blog</router-link>
+    <div class="navbar">
+        <ul>
+            <li>
+                <router-link to="/" class="nav-home-logo">Home</router-link>
+            </li>
+            <li>
+                <router-link to="/products" class="nav-option">Products</router-link>
+            </li>
+            <li>
+                <router-link to="/media" class="nav-option">Media</router-link>
+            </li>
+            <li>
+                <router-link to="/blog" class="nav-option">Blog</router-link>
+            </li>
+        </ul>
     </div>
 
     <div class="body">
@@ -63,16 +73,43 @@ export default {
     padding: 0px;
 }
 
-.head {
+.navbar {
     color: white;
     background-color: black;
     border: 0px;
-}
-
-.navbar {
     border-radius: 0px;
     padding: 2em;
     margin: 0px;
+}
+
+.navbar>ul {
+    list-style-type: none;
+    margin: 0px;
+    padding: 0px;
+}
+
+.navbar>ul>li {
+    float: left;
+
+    font-size: 2vh;
+    text-align: center;
+    
+    margin: 0em 1vw;
+}
+.navbar>ul>li>a {
+    color: white;
+}
+
+.navbar>ul>li>a:hover {
+    color: #888;
+    text-decoration: none;
+}
+
+
+.nav-home-logo {
+    background: url(../../media/logo/gpn.jpg);
+    width: 300px;
+    height: 300px;
 }
 
 </style>

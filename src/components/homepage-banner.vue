@@ -30,11 +30,11 @@ export default {
 
 #banner {
     position: relative;
-    border: thin solid black;
+    border: thin solid #333;
     margin-bottom: 2em;
     padding: 0em;
-    height: 500px;
-    overflow:hidden;
+    height: 60vh;
+    overflow: hidden;
 }
 
 #banner>.gpn-main-text {
