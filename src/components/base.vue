@@ -105,11 +105,12 @@ export default {
     text-decoration: none;
 }
 
-
+/** doesn't work
 .nav-home-logo {
     background: url(../../media/logo/gpn.jpg);
     width: 300px;
     height: 300px;
 }
+*/
 
 </style>

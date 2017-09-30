@@ -3,7 +3,7 @@
         <main class="gpn-main-text col-xs-12">
             <div class="gpn-text">Gaya Prima Nirmala</div>
             <div class="gpn-subtext">Freedom In Luxury.</div>
-            <div class="gpn-subtext">FREEDOM IN LUXURY.</div>
+            <div class="gpn-subtext" style="display: none;">FREEDOM IN LUXURY.</div>
         </main>
         <div class="banner-img-wrapper">
             <img class="banner-img" v-bind:src="banner_img.link" v-bind:alt="banner_img.alt">
@@ -18,7 +18,7 @@ export default {
     return {
       banner_img:
         {
-          link: require('../../media/banner.jpg'),
+          link: require('../../media/banners/1.jpg'),
           alt: 'Luxury in Freedom'
         }
     }
@@ -39,8 +39,10 @@ export default {
 
 #banner>.gpn-main-text {
     position: absolute;
+    margin-top: 1em;
     z-index: 1;
 
+    text-align: center;
     font-size: 90px;
     font-weight: 900;
     color: black;

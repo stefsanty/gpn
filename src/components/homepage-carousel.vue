@@ -2,14 +2,9 @@
     <div class="carousel col-xs-12">
         <carousel :scrollPerPage="true" :perPage="4" :loop="true">
             <slide class="carousel-slide" v-for="p in carousel_products" :key="p.id">
-                <img class="carousel-img" v-bind:src="p.img_link" v-bind:alt="p.name" v-on:click="">
+                <img class="carousel-img" v-bind:src="p.img_link" v-bind:alt="p.name" v-bind:obj="p" v-on:click="getCarouselDetails()">
             </slide>
         </carousel>
-        <button v-on:click="getCarouselDetails">This button calls getCarouselDetails</button>
-        <code>methods: {
-        getCarouselDetails: function () {
-          alert('it works')
-        }</code>
         <div class="carousel-slide-details" style="display: none;">
             
         </div>
@@ -39,36 +34,37 @@ export default {
             {
               name: 'Corradi again',
               brand: 'Corradi',
-              img_link: require('../../media/banner.jpg'),
+              img_link: require('../../media/banners/1.jpg'),
               description: 'This is a banner'
             },
           p3:
             {
               name: 'Corradi again',
               brand: 'Corradi',
-              img_link: require('../../media/banner.jpg'),
+              img_link: require('../../media/banners/1.jpg'),
               description: 'This is a banner'
             },
           p4:
             {
               name: 'Corradi again',
               brand: 'Corradi',
-              img_link: require('../../media/banner.jpg'),
+              img_link: require('../../media/banners/1.jpg'),
               description: 'This is a banner'
             },
           p5:
             {
               name: 'Corradi again',
               brand: 'Corradi',
-              img_link: require('../../media/banner.jpg'),
+              img_link: require('../../media/banners/1.jpg'),
               description: 'This is a banner'
             }
-        },
-      methods: {
-        getCarouselDetails: function () {
-          alert('it works')
         }
-      }
+    }
+  },
+  methods: {
+    getCarouselDetails: function () {
+      console.log(this._data.carousel_products.p1.name)
+      // This should log "Corradi Condominium" or something
     }
   }
 }
