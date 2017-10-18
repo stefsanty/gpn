@@ -11,21 +11,21 @@
                 </router-link>
             </li>
             <li>
-                <router-link to="/products">
+                <router-link to="/products" class="nav-option">
                 <div class="nav-text-box" id="nav-products-box">
                         <span>Products</span>
                 </div>
                 </router-link>
             </li>
             <li>
-                <router-link to="/media">
+                <router-link to="/media" class="nav-option">
                 <div class="nav-text-box" id="nav-media-box">
                     <span>Media</span>
                 </div>
                 </router-link>
             </li>
             <li>
-                <router-link to="/blog">
+                <router-link to="/blog" class="nav-option">
                 <div class="nav-text-box" id="nav-blog-box">
                 <span>Blog</span>
                 </div>
@@ -118,9 +118,8 @@ export default {
     text-decoration: none;
 }
 
-.navbar>ul>li>a {
+.navbar>ul>li>a:enabled {
     text-decoration: none;
-    background: rgba(33,33,233,0.8);
 }
 
 .nav-text-box {
@@ -132,9 +131,8 @@ export default {
     color: white;
     padding: 2em;
     background: rgba(0,0,0,0.3);
-    box-shadow: 1px 1px 1px rgba(0,0,0,0);
     transition-timing-function: linear;
-    transition: color 0.2s, background 0.3s, top 0.3s;
+    transition: color 0.2s, background 0.3s, top 3s;
 }
 .nav-text-box>span {
     position: relative;
@@ -147,7 +145,7 @@ export default {
     top: -1px;
 }
 .nav-text-box:enabled {
-    background: rgba(33,33,33,0.8);
+    background: rgba(233,33,33,0.8);
     color: #dea988;
     top: -1px;
 }
@@ -169,7 +167,7 @@ export default {
 }
 
 .nav-home-logo:hover {
-    color: white;
+    color: #dea988;
     top: 0px;
 }
 

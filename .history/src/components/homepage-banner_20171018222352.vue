@@ -5,7 +5,9 @@
             <div class="gpn-subtext">Freedom In Luxury.</div>
         </main>
             <router-link to="/products">
-                <div class="products-button">Take a look at our collection <img src="../../static/media/cart.png" style="width: auto; max-height: 100%;"></div>
+                <div class="products-button">
+                <div class="text">Take a look at our collection</div>
+                </div>
             </router-link>
         <div class="banner-img-wrapper">
             <img class="banner-img" v-bind:src="banner_img.link" v-bind:alt="banner_img.alt">
@@ -84,7 +86,7 @@ export default {
     background-color: #bb9966;
     color: white;
     border-radius: 4px;
-    box-shadow: 2px 10px 10px rgba(33,33,33,0.4)
+    box-shadow: 2px 2px 10px rgba(33,33,33,0.4)
 
 }
 

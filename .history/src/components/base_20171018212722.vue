@@ -11,21 +11,21 @@
                 </router-link>
             </li>
             <li>
-                <router-link to="/products">
+                <router-link to="/products" class="nav-option">
                 <div class="nav-text-box" id="nav-products-box">
                         <span>Products</span>
                 </div>
                 </router-link>
             </li>
             <li>
-                <router-link to="/media">
+                <router-link to="/media" class="nav-option">
                 <div class="nav-text-box" id="nav-media-box">
                     <span>Media</span>
                 </div>
                 </router-link>
             </li>
             <li>
-                <router-link to="/blog">
+                <router-link to="/blog" class="nav-option">
                 <div class="nav-text-box" id="nav-blog-box">
                 <span>Blog</span>
                 </div>
@@ -120,7 +120,7 @@ export default {
 
 .navbar>ul>li>a {
     text-decoration: none;
-    background: rgba(33,33,233,0.8);
+    background: rgba(233,33,33,0.8);
 }
 
 .nav-text-box {

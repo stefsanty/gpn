@@ -32,14 +32,19 @@ export default new VueRouter({
             b: load('homepage-carousel')
           }
         },
-        { path: '/products',
-          components:
-          {
-            a: load('products-banner'),
-            b: load('homepage-carousel')
-          }
+        { path: '',
+        components:
+        {
+          a: load('homepage-banner'),
+          b: load('homepage-carousel')
         }
-
+      },
+      { path: '/:id',
+      components:
+      {
+        a: load('homepage-banner'),
+        b: load('homepage-carousel')
+      }
       ]
     },
 

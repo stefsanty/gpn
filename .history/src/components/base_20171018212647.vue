@@ -11,21 +11,21 @@
                 </router-link>
             </li>
             <li>
-                <router-link to="/products">
+                <router-link to="/products" class="nav-option">
                 <div class="nav-text-box" id="nav-products-box">
                         <span>Products</span>
                 </div>
                 </router-link>
             </li>
             <li>
-                <router-link to="/media">
+                <router-link to="/media" class="nav-option">
                 <div class="nav-text-box" id="nav-media-box">
                     <span>Media</span>
                 </div>
                 </router-link>
             </li>
             <li>
-                <router-link to="/blog">
+                <router-link to="/blog" class="nav-option">
                 <div class="nav-text-box" id="nav-blog-box">
                 <span>Blog</span>
                 </div>

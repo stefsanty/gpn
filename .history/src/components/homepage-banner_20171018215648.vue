@@ -4,9 +4,7 @@
             <div class="gpn-text">Gaya Prima Nirmala</div>
             <div class="gpn-subtext">Freedom In Luxury.</div>
         </main>
-            <router-link to="/products">
-                <div class="products-button">Take a look at our collection <img src="../../static/media/cart.png" style="width: auto; max-height: 100%;"></div>
-            </router-link>
+            <div class="products-button">Take a look at our collection</div>
         <div class="banner-img-wrapper">
             <img class="banner-img" v-bind:src="banner_img.link" v-bind:alt="banner_img.alt">
         </div>
@@ -72,19 +70,15 @@ export default {
     position: absolute;
     display: inline;
     z-index: 1;
-    height: 60px;
-    overflow: hidden;
 
-    margin: 80vh auto 0px 10vw;
+    margin: 80vh auto 0px 30vw;
     font-size: 25px;
-    text-align: right;
-    padding: 10px 90px;
+    text-align: center;
+    padding: 10px;
     
     float: right;
-    background-color: #bb9966;
+    background-color: rgba(102,102,255,1.0);
     color: white;
-    border-radius: 4px;
-    box-shadow: 2px 10px 10px rgba(33,33,33,0.4)
 
 }
 
@@ -97,11 +91,11 @@ img.banner-img {
     position: relative;
     z-index: 0;
 
-    width: 110%;
+    width: 100%;
     opacity: 0.8;
     height: auto;
 
-    transform: translate(-100px, -50px);
+    transform: translate(0px, -100px);
 }
 
 </style>

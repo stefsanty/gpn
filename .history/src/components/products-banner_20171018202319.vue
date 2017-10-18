@@ -3,10 +3,8 @@
         <main class="gpn-main-text col-xs-12">
             <div class="gpn-text">Gaya Prima Nirmala</div>
             <div class="gpn-subtext">Freedom In Luxury.</div>
+            <div class="gpn-subtext" style="display: none;">FREEDOM IN LUXURY.</div>
         </main>
-            <router-link to="/products">
-                <div class="products-button">Take a look at our collection <img src="../../static/media/cart.png" style="width: auto; max-height: 100%;"></div>
-            </router-link>
         <div class="banner-img-wrapper">
             <img class="banner-img" v-bind:src="banner_img.link" v-bind:alt="banner_img.alt">
         </div>
@@ -20,7 +18,7 @@ export default {
     return {
       banner_img:
         {
-          link: require('../../media/banners/3.jpg'),
+          link: require('../../media/banners/1.jpg'),
           alt: 'Luxury in Freedom'
         }
     }
@@ -34,9 +32,10 @@ export default {
 
 #banner {
     position: relative;
+    border: thin solid #333;
     margin-bottom: 2em;
     padding: 0em;
-    height: 100vh;
+    height: 40vh;
     overflow: hidden;
 
     background-color: #000;
@@ -48,7 +47,7 @@ export default {
     z-index: 1;
 
     margin-top: 30vh;
-    padding: 5px;
+    padding: 0px;
     margin-left: 8vw;
 
     float: left;
@@ -62,46 +61,19 @@ export default {
 }
 
 #banner>.gpn-main-text>.gpn-subtext {
-    background-color: rgba(255,255,255,1);
-    color: #6666ff;
+    color: #3333ff;
     font-family: 'Geomanist';
     font-weight: 300;
-}
-
-.products-button {
-    position: absolute;
-    display: inline;
-    z-index: 1;
-    height: 60px;
-    overflow: hidden;
-
-    margin: 80vh auto 0px 10vw;
-    font-size: 25px;
-    text-align: right;
-    padding: 10px 90px;
-    
-    float: right;
-    background-color: #bb9966;
-    color: white;
-    border-radius: 4px;
-    box-shadow: 2px 10px 10px rgba(33,33,33,0.4)
-
-}
-
-@keyframes moving-banner-img {
-    0%      {transform: translate(-340px, -200px);}
-    100%    {transform: translate(0px, 0px); width: 100%;}
 }
 
 img.banner-img {
     position: relative;
     z-index: 0;
 
-    width: 110%;
+    width: 120%;
     opacity: 0.8;
     height: auto;
 
-    transform: translate(-100px, -50px);
 }
 
 </style>

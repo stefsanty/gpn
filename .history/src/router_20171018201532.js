@@ -35,7 +35,7 @@ export default new VueRouter({
         { path: '/products',
           components:
           {
-            a: load('products-banner'),
+            a: 
             b: load('homepage-carousel')
           }
         }

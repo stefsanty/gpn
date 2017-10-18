@@ -35,10 +35,10 @@ export default new VueRouter({
         { path: '/products',
           components:
           {
-            a: load('products-banner'),
+            a: load('homepage-banner'),
             b: load('homepage-carousel')
           }
-        }
+        },
 
       ]
     },

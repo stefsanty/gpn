@@ -77,6 +77,7 @@ export default {
 
     margin: 80vh auto 0px 10vw;
     font-size: 25px;
+    justify-content:flex-end
     text-align: right;
     padding: 10px 90px;
     
@@ -84,7 +85,7 @@ export default {
     background-color: #bb9966;
     color: white;
     border-radius: 4px;
-    box-shadow: 2px 10px 10px rgba(33,33,33,0.4)
+    box-shadow: 2px 2px 10px rgba(33,33,33,0.4)
 
 }
 

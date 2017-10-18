@@ -11,28 +11,28 @@
                 </router-link>
             </li>
             <li>
-                <router-link to="/products">
-                <div class="nav-text-box" id="nav-products-box">
+                <router-link to="/products" class="nav-option">
+                <div class="nav-text-box nav-products-box">
                         <span>Products</span>
                 </div>
                 </router-link>
             </li>
             <li>
-                <router-link to="/media">
-                <div class="nav-text-box" id="nav-media-box">
+                <router-link to="/media" class="nav-option">
+                <div class="nav-text-box nav-media-box">
                     <span>Media</span>
                 </div>
                 </router-link>
             </li>
             <li>
-                <router-link to="/blog">
-                <div class="nav-text-box" id="nav-blog-box">
+                <router-link to="/blog" class="nav-option">
+                <div class="nav-text-box nav-blog-box">
                 <span>Blog</span>
                 </div>
                 </router-link>
             </li>
         </ul>
-    </div>  
+    </div>
 
     <div class="body">
         <router-view name="a"></router-view>
@@ -118,9 +118,8 @@ export default {
     text-decoration: none;
 }
 
-.navbar>ul>li>a {
+.navbar>ul>li>a:enabled {
     text-decoration: none;
-    background: rgba(33,33,233,0.8);
 }
 
 .nav-text-box {
@@ -132,9 +131,8 @@ export default {
     color: white;
     padding: 2em;
     background: rgba(0,0,0,0.3);
-    box-shadow: 1px 1px 1px rgba(0,0,0,0);
     transition-timing-function: linear;
-    transition: color 0.2s, background 0.3s, top 0.3s;
+    transition: color 0.3s, background 0.5s, top 1s;
 }
 .nav-text-box>span {
     position: relative;
@@ -146,12 +144,6 @@ export default {
     color: #dea988;
     top: -1px;
 }
-.nav-text-box:enabled {
-    background: rgba(33,33,33,0.8);
-    color: #dea988;
-    top: -1px;
-}
-
 .nav-home-logo {
     display: inline-block;
     position: relative;
@@ -169,7 +161,7 @@ export default {
 }
 
 .nav-home-logo:hover {
-    color: white;
+    color: #dea988;
     top: 0px;
 }
 

@@ -4,9 +4,7 @@
             <div class="gpn-text">Gaya Prima Nirmala</div>
             <div class="gpn-subtext">Freedom In Luxury.</div>
         </main>
-            <router-link to="/products">
-                <div class="products-button">Take a look at our collection <img src="../../static/media/cart.png" style="width: auto; max-height: 100%;"></div>
-            </router-link>
+            <div class="products-button">Take a look at our collection...</div>
         <div class="banner-img-wrapper">
             <img class="banner-img" v-bind:src="banner_img.link" v-bind:alt="banner_img.alt">
         </div>
@@ -48,7 +46,7 @@ export default {
     z-index: 1;
 
     margin-top: 30vh;
-    padding: 5px;
+    padding: 0px;
     margin-left: 8vw;
 
     float: left;
@@ -63,28 +61,21 @@ export default {
 
 #banner>.gpn-main-text>.gpn-subtext {
     background-color: rgba(255,255,255,1);
+    display: inline-block;
     color: #6666ff;
-    font-family: 'Geomanist';
+    font-family: 'Calibri';
     font-weight: 300;
 }
 
 .products-button {
     position: absolute;
-    display: inline;
+    display: inline-block;
     z-index: 1;
-    height: 60px;
-    overflow: hidden;
 
-    margin: 80vh auto 0px 10vw;
-    font-size: 25px;
-    text-align: right;
-    padding: 10px 90px;
+    margin-top: 75vh;
+    font-size: 20px;
     
     float: right;
-    background-color: #bb9966;
-    color: white;
-    border-radius: 4px;
-    box-shadow: 2px 10px 10px rgba(33,33,33,0.4)
 
 }
 
@@ -97,11 +88,12 @@ img.banner-img {
     position: relative;
     z-index: 0;
 
-    width: 110%;
+    width: 120%;
     opacity: 0.8;
     height: auto;
 
-    transform: translate(-100px, -50px);
+    animation-name: moving-banner-img;
+    animation-duration: 40s;
 }
 
 </style>

@@ -11,21 +11,21 @@
                 </router-link>
             </li>
             <li>
-                <router-link to="/products">
+                <router-link to="/products" class="nav-option">
                 <div class="nav-text-box" id="nav-products-box">
                         <span>Products</span>
                 </div>
                 </router-link>
             </li>
             <li>
-                <router-link to="/media">
+                <router-link to="/media" class="nav-option">
                 <div class="nav-text-box" id="nav-media-box">
                     <span>Media</span>
                 </div>
                 </router-link>
             </li>
             <li>
-                <router-link to="/blog">
+                <router-link to="/blog" class="nav-option">
                 <div class="nav-text-box" id="nav-blog-box">
                 <span>Blog</span>
                 </div>
@@ -132,7 +132,7 @@ export default {
     color: white;
     padding: 2em;
     background: rgba(0,0,0,0.3);
-    box-shadow: 1px 1px 1px rgba(0,0,0,0);
+    box-shadow: 1px 2px 1px rgba(0,0,0,0.9);
     transition-timing-function: linear;
     transition: color 0.2s, background 0.3s, top 0.3s;
 }
