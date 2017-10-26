@@ -131,9 +131,8 @@ export default {
 
     color: white;
     padding: 2em;
-    background: rgba(0,0,0,0.3);
+    background: rgba(0,0,0,0.25);
     box-shadow: 1px 1px 1px rgba(0,0,0,0);
-    transition-timing-function: linear;
     transition: color 0.2s, background 0.3s, top 0.3s;
 }
 .nav-text-box>span {
@@ -163,14 +162,12 @@ export default {
     padding: 0px;
     margin-right: 40px;
     height: 100px;
-
-    transition-timing-function: linear;
     transition: color 0.2s, background 0.3s, top 0.3s;
 }
 
 .nav-home-logo:hover {
     color: white;
-    top: 0px;
+    top: 10px;
 }
 
 .nav-home-logo>img {

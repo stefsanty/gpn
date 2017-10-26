@@ -29,14 +29,14 @@ export default new VueRouter({
           components:
           {
             a: load('homepage-banner'),
-            b: load('homepage-carousel')
+            b: load('homepage-b')
           }
         },
         { path: '/products',
           components:
           {
             a: load('products-banner'),
-            b: load('homepage-carousel')
+            b: load('products-carousel')
           }
         }
 

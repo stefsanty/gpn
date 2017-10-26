@@ -62,6 +62,7 @@ export default {
 }
 
 #banner>.gpn-main-text>.gpn-subtext {
+    display: inline-block;
     background-color: rgba(255,255,255,1);
     color: #6666ff;
     font-family: 'Geomanist';
