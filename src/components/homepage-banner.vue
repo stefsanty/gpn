@@ -58,6 +58,7 @@ export default {
     color: white;
     padding: 60px 5vw;
     line-height: 1em;
+    cursor: default;
     
 }
 
@@ -67,6 +68,13 @@ export default {
     color: #6666ff;
     font-family: 'Geomanist';
     font-weight: 300;
+    transition: color 0.5s, background-color 0.5s ease;
+}
+
+#banner>.gpn-main-text>.gpn-subtext:hover {
+    background-color: #6666ff;
+    color: white;
+    cursor: default;
 }
 
 .products-button {

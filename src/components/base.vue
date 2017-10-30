@@ -18,9 +18,9 @@
                 </router-link>
             </li>
             <li>
-                <router-link to="/media">
+                <router-link to="/products2">
                 <div class="nav-text-box" id="nav-media-box">
-                    <span>Media</span>
+                    <span>Products</span>
                 </div>
                 </router-link>
             </li>
@@ -35,8 +35,12 @@
     </div>  
 
     <div class="body">
+        <transition name="fade" mode="out-in">
         <router-view name="a"></router-view>
+        </transition>
+        <transition name="fade" mode="out-in">
         <router-view name="b"></router-view>
+        </transition>
         <router-view name="c"></router-view>
     </div>
     
@@ -82,13 +86,12 @@ export default {
 .base {
     font-family: 'Oxygen';
     padding: 0px;
-    overflow: hidden;
 }
 .navbar {
-    position: absolute;
+    position: fixed;
     width: 100%;
     height: 100px;
-    z-index: 1;
+    z-index: 3;
 
     color: white;
     background: rgba(0,0,0,0);
@@ -173,6 +176,17 @@ export default {
 .nav-home-logo>img {
     width: auto;
     max-height: 100%;
+}
+
+.fade-enter-active, .fade-leave-active {
+  transition: opacity 0.7s ease
+}
+.fade-enter, .fade-leave-to /* .fade-leave-active below version 2.1.8 */ {
+  opacity: 0;
+}
+
+.fade-v-enter-to, .fade-v-leave {
+  opacity: 1;
 }
 
 </style>

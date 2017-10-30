@@ -5,7 +5,8 @@
                 <img class="carousel-img" v-bind:src="product.img_link" v-bind:alt="product.name" v-on:click="getCarouselDetails(product)">
             </slide>
         </carousel>
-        <div id="details" :style="details.style">
+        <div id="details" :style="details.style"> 
+          <div class="details-img"><img v-bind:src="details.img_link"></div>
           <div class="details-name">{{ details.name }}</div>
           <div class="details-description" v-html="details.description"></div>
         </div>
@@ -26,7 +27,7 @@ export default {
         [
           {
             id: 1,
-            name: 'Corradi Condominium Special',
+            name: 'Corradi Condominium',
             brand: 'Corradi',
             img_link: require('../../media/products/corradi_test.jpg'),
             description: 'Somebody once told me the world is gonna roll me'
@@ -42,14 +43,14 @@ export default {
             id: 3,
             name: 'Corradi again',
             brand: 'Corradi',
-            img_link: require('../../media/banners/1.jpg'),
+            img_link: require('../../media/banners/3.jpg'),
             description: 'She was looking kind of dumb with her finger and her thumb'
           },
           {
             id: 4,
             name: 'Corradi again',
             brand: 'Corradi',
-            img_link: require('../../media/banners/1.jpg'),
+            img_link: require('../../media/banners/3.jpg'),
             description: 'In the shape of an "L" on her forehead'
           },
           {
@@ -68,6 +69,7 @@ export default {
           }
         ],
       details: {
+        img_link: '',
         name: '',
         description: '',
         style: { display: 'none' }
@@ -78,27 +80,30 @@ export default {
     getCarouselDetails: function (product) {
       var details = this.details
 
+      // Animate closing details div if not hidden
+
       // Populate and show details div
+      details.img_link = product.img_link
       details.name = product.name
       details.description = product.description
-      details.style = {}
+      details.style = { animation: 'fadein 1s' }
       details.description = details.description.replace(/\n/g, '<br />')
 
-      // Specify location of link and div
-      let d = document
-      let detailsAnchor = d.getElementById('details') // there is only 1
-      let linksToDetailsAnchor = d.getElementsByClassName('carousel-img')
-      // linksToDeatilsAnchor contains all carousel-img's
+      // // Specify location of link and div
+      // let d = document
+      // let detailsAnchor = d.getElementById('details') // there is only 1
+      // let linksToDetailsAnchor = d.getElementsByClassName('carousel-img')
+      // // linksToDeatilsAnchor contains all carousel-img's
 
-      // pure JS scroll
-      //   ############ Insert pure JS scroll here ############
-      //   ############ Insert pure JS scroll here ############
-      //   ############ Insert pure JS scroll here ############
+      // // pure JS scroll
+      // //   ############ Insert pure JS scroll here ############
+      // //   ############ Insert pure JS scroll here ############
+      // //   ############ Insert pure JS scroll here ############
 
-      // addEventListener to each carousel-img
-      for (let i = 0; i < linksToDetailsAnchor.length; i++) {
-        linksToDetailsAnchor[i].addEventListener('click', scrollTo(detailsAnchor, 0, 1250), false)
-      }
+      // // addEventListener to each carousel-img
+      // for (let i = 0; i < linksToDetailsAnchor.length; i++) {
+      //   linksToDetailsAnchor[i].addEventListener('click', scrollTo(detailsAnchor, 0, 1250), false)
+      // }
     }
   }
 }
@@ -124,6 +129,20 @@ export default {
 .carousel-slide>img:hover {
     cursor: pointer;
 }
+
+.details-img {
+  width: 100%;
+}
+
+.details-img>img {
+    width: 100%;
+}
+
+@keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
 
 </style>
 

@@ -25,6 +25,7 @@ export default new VueRouter({
     { path: '/',
       component: load('base'),
       children: [
+
         { path: '',
           components:
           {
@@ -32,6 +33,7 @@ export default new VueRouter({
             b: load('homepage-b')
           }
         },
+
         { path: '/products',
           components:
           {
@@ -43,7 +45,34 @@ export default new VueRouter({
       ]
     },
 
+    { path: '/products2',
+      component: load('base'),
+      children: [
+
+        { path: '',
+          components:
+          {
+            a: load('products-banner'),
+            b: load('products-list')
+          }
+        },
+
+        { path: ':id',
+          components:
+          {
+            a: load('products-banner'),
+            b: load('product-details')
+          }
+        }
+
+      ]
+    },
+
     // Always leave this last one
     { path: '*', component: load('Error404') } // Not found
-  ]
-})
+  ],
+  scrollBehavior (to, from, savedPosition) {
+    return { x: 0, y: 0 }
+  }
+}
+)
