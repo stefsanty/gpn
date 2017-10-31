@@ -60,8 +60,7 @@ export default new VueRouter({
         { path: ':id',
           components:
           {
-            a: load('products-banner'),
-            b: load('product-details')
+            a: load('product-details')
           }
         }
 

@@ -97,11 +97,6 @@ export default {
 
 }
 
-@keyframes moving-banner-img {
-    0%      {transform: translate(-340px, -200px);}
-    100%    {transform: translate(0px, 0px); width: 100%;}
-}
-
 img.banner-img {
     position: relative;
     z-index: 0;

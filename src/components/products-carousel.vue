@@ -37,7 +37,7 @@ export default {
             name: 'Corradi again',
             brand: 'Corradi',
             img_link: require('../../media/banners/1.jpg'),
-            description: 'I ain\'t the sharpest tool in the shed'
+            description: `I ain't the sharpest tool in the shed`
           },
           {
             id: 3,
